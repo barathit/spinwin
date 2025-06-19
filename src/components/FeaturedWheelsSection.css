@@ -1,0 +1,102 @@
+.featured-section {
+  background: linear-gradient(135deg, #0b0f3a, #11184e); /* dim blue gradient */
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-text {
+  color: orange;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.wheel-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.wheel-card {
+  background: #2e2a8f; /* updated to fit dim blue theme */
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wheel-card:hover {
+  transform: scale(1.05);
+}
+
+.wheel-image {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 10px;
+  display: block;
+
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #555;
+  margin: 12px 0;
+}
+
+.wheel-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.wheel-info {
+  font-size: 14px;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.wheel-info i {
+  margin-right: 5px;
+}
+
+.highlight {
+  color: gold;
+  font-weight: 600;
+}
+
+.play-button {
+  background: linear-gradient(to right, #00c3ff, #007fff);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.play-button:hover {
+  background: linear-gradient(to right, #007fff, #00c3ff);
+}

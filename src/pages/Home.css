@@ -1,0 +1,243 @@
+.hero-section {
+  padding: 0px 0;
+   background: linear-gradient(to top, #c54ce3, #511fae);
+  color: white;
+}
+
+.home-page {
+  padding-bottom: 0;     /* Remove extra bottom padding */
+  margin-bottom: 0;      /* Remove any bottom margin */
+  overflow-x: hidden;    /* Optional: prevents horizontal scroll if needed */
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.hero-left {
+  
+  position: relative;
+  flex: 1;
+}
+
+.hero-bg-image {
+  width: 500%;
+  max-width: 1000px;
+  margin-right: 1000px;
+  
+  height: auto;
+  display: flex;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 50%;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: center;
+   margin-bottom: 250px;
+}
+
+.wheel-image {
+  width: 2500px;
+  height: 300px;
+  margin-top: 80px;
+}
+
+.spin-btn {
+  margin-top: 10px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #2e90ff, #12c2e9);
+  color: white;
+  cursor: pointer;
+}
+
+.wheel-caption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/* section2 */
+.step-card {
+  width: 260px;
+  height: 190px;
+  margin-left: 12px;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.step-card .step-image {
+ 
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.step-number {
+  font-size: 1.25rem;
+  color: #f0f0f0;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+/* Keep other existing styles */
+.how-to-play-section {
+  padding: 4rem ;
+  background-color: #12002c;
+  color: #fff;
+}
+
+.how-to-play-header {
+  text-align: center;
+  /* margin-bottom: 2rem; */
+}
+
+.how-to-play-title {
+  gap: 2rem;
+  font-size: 50px;
+  font-weight: 700;
+  /* margin-bottom: 0.5rem; */
+  margin-right: 900px;
+}
+
+.how-to-play-subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+   margin-right: 1020px;
+}
+
+.how-to-play-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.steps-horizontal {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.illustration-right {
+  flex: 1;
+  text-align: center;
+}
+
+.illustration-right img {
+    margin-left: 60px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* section3 */
+
+.featured-wheels-section {
+  background: radial-gradient(#1b0033, #0a0018);
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+}
+
+.featured-wheels-header .featured-subtext {
+  color: orange;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.featured-title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.featured-desc {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.wheel-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.wheel-card {
+  background-color: #5b30e0;
+  border-radius: 6px;
+  width: 250px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.wheel-card:hover {
+  transform: scale(1.05);
+}
+
+.wheel-card img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.wheel-label {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+}

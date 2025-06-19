@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0115;
+}
+
+/* === Main Gradient Background === */
+.main-wrapper {
+  background: linear-gradient(to bottom, #160631, #0b0115);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 60px;
+}
+
+/* === Purple Top Shape === */
+.top-background-shape {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(to bottom, #b84fe3, #7621c6);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+/* === All Wheels Box === */
+.all-wheels-container {
+  background: linear-gradient(320deg, #3b26db 1%, #7b19cb);
+  margin: -60px auto 0;
+  max-width: 78%;
+  
+  border-radius: 25px;
+  padding: 60px 30px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.wheels-row {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.wheel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  position: relative;
+}
+
+.wheel-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 100%;
+  height: 4px;
+  background-color: orange;
+  margin-top: 8px;
+  border-radius: 4px;
+  display: none;
+}
+
+.active .underline,
+.wheel-item:hover .underline {
+  display: block;
+}
+
+/* === Search Bar Styling === */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.search-bar {
+  width: 500px;
+  max-width: 90%;
+  padding: 14px 45px 14px 20px;
+  font-size: 16px;
+  border: 1px solid #37276b;
+  border-radius: 30px;
+  background-color: #12052a;
+  color: #b6aefb;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #7b5fe4;
+  box-shadow: 0 0 8px rgba(123, 95, 228, 0.3);
+}
+
+.search-bar::placeholder {
+  color: #605b9a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.search-icon {
+  position: relative;
+  margin-left: -40px;
+  color: #7f76c9;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* === Featured Cards Section === */
+.featured-cards-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px 40px 80px;
+ 
+}
+
+/* Card Box */
+.featured-card {
+  width: 380px;
+  /* border-radius: 5px; */
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Top Image Box (Purple) */
+.wheel-image-box {
+    height: 200px;
+  background-color: #5b3cd6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.wheel-image-box img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Bottom Card Content (Darker Purple) */
+.card-content {
+  background-color: #5635ca;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin: 10px 0 4px;
+}
+
+.card-content .by {
+  color: #ff3399;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.card-content p {
+  font-size: 14px;
+}
+
+.play-button {
+  background-color: #1bc2b3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  background-color: #19a99c;
+}

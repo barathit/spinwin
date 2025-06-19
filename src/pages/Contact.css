@@ -1,0 +1,174 @@
+.contact-wrapper {
+  background-color: #0b0115;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* 👇 The gradient background with rounded bottom + content inside */
+.contact-top-curve {
+  width: 100%;
+  height: auto;
+  padding: 20px 20px 20px;
+  background: linear-gradient(1turn, #DF52F8, #3B007E);
+  border-bottom-left-radius: 30% 120px;
+  border-bottom-right-radius: 30% 120px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  max-width: 900px;
+  z-index: 2;
+}
+
+.contact-title {
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 20px;
+  
+  letter-spacing: 1px;
+}
+
+.contact-desc {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0px auto 0px;
+  color: white;
+}
+
+.contact-email,
+.contact-address {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* .contact-address {
+  margin-top: 30px;
+} */
+
+.highlight {
+  color: #ffe600;
+  font-weight: 600;
+}
+
+
+
+
+.contact-form-section {
+  background: linear-gradient(to bottom, #6e1fd9, #4a14aa);
+  border-radius: 25px;
+  padding: 50px;
+  max-width: 1200px;
+
+  margin: 0 auto 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.form-box h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.form-box label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.required {
+  color: red;
+  margin-left: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid #a078ff;
+  border-radius: 8px;
+  color: #cfc3ff;
+  font-size: 15px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  background: linear-gradient(to right, #2ad4b8, #377cfb);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+.image-and-socials {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-image {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.social-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-card {
+  background: radial-gradient(circle at top left, #1a0831, #000000);
+  padding: 20px 25px;
+  border-radius: 25px;
+  text-align: center;
+  width: 70px;
+  color: white;
+}
+
+.social-card img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.social-card h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.social-card p {
+  font-size: 14px;
+  color: #30f0aa;
+}

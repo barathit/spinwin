@@ -1,0 +1,81 @@
+/* DashboardLogin.css */
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #21209c, #2a2aa6); /* Deep blue gradient */
+  padding: 20px;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 10px;
+}
+
+.login-brand {
+  font-size: 40px;
+  font-family: 'Pacifico', cursive;
+  color: #ff66cc;
+  text-shadow: 0 0 5px #ff66cc;
+  margin-bottom: 5px;
+}
+
+.login-heading {
+  font-size: 22px;
+  color: #1f2b67;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.login-instruction {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.login-input:focus {
+  border-color: #5e00c5;
+}
+
+.login-submit-btn {
+  background: #42b24d;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-submit-btn:hover {
+  background: #37993f;
+}

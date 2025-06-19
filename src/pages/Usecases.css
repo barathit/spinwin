@@ -1,0 +1,135 @@
+.usecases-section {
+  background: #0f0322;
+  position: relative;
+  padding: 120px 20px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Purple curved top background */
+.usecases-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, #b84de4, #6a1db3);
+  border-bottom-left-radius: 50% 80px;
+  border-bottom-right-radius: 50% 80px;
+  z-index: 0;
+}
+
+.usecases-box {
+  background: linear-gradient(to right, #6214d1, #3b19e6);
+  padding: 80px 40px;
+  border-radius: 24px;
+  color: white;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.usecases-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.usecases-subtext {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+
+.usecases-page {
+  background: #0f0322;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Purple Gradient Banner */
+.usecases-hero {
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  padding: 80px 40px;
+  border-radius: 24px;
+  margin-bottom: 80px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usecases-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.usecases-subtext {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.usecases-section-2 {
+  background-color: #0f0322; /* ✅ Full background */
+  padding: 60px 20px;
+}
+
+.usecases-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+
+/* Card Style */
+.usecase-card {
+  background: linear-gradient(to top, #c54ce3, #511fae);
+  padding: 40px 30px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  
+}
+
+.usecase-card:hover {
+  transform: translateY(-6px);
+}
+
+.usecase-card img {
+  width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.usecase-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.usecase-card p {
+  font-size: 1rem;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+.usecases-subtext1 {
+    margin-left: 400px;
+  font-size: 15px;
+  color: #e0e0e0;
+  
+}
+
+.usecases-subtext2 {
+    margin-left: 550px;
+  font-size: 15px;
+  color: #e0e0e0;
+
+  
+}

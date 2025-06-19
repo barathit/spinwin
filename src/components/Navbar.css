@@ -1,0 +1,115 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 36px;
+   position: sticky;
+   background-color:#331038;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  top: 0%;
+  bottom: 0%;
+  z-index: 1000;
+}
+
+.left-nav-items {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+   margin-left: 100px;
+  
+}
+
+.brand-text {
+  font-size: 28px;
+  font-weight: 500;
+  color: #ff00aa; /* Neon pink */
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 29px;
+  list-style: none;
+   margin-left: 330px;
+}
+
+
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff00aa;
+}
+.create-wheel-btn {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.create-wheel-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.icon-img {
+  width: 25px;
+  margin-right: 8px;
+}
+
+
+.create-wheel-btn span {
+  color: #1a004f;
+  font-weight: 600;
+   
+}
+
+
+
+
+/* Default (desktop) styles already done above */
+
+/* 🔽 Mobile / Tablet View */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  .create-wheel-btn {
+    align-self: flex-end;
+    margin-top: 16px;
+  }
+
+  .logo-img {
+    width: 100px;
+    height: auto;
+  }
+}
