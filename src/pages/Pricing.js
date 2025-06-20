@@ -22,8 +22,8 @@ const navigate = useNavigate();
         <p className="price-text">
           <span className="price-amount">₹5000</span> Per Wheel
         </p>
-        <button className="create-btn" onClick={handleClick}>
-          <img src="/assets/wheel.webp" alt="Wheel" className="wheel-icon1" />
+        <button className="create-wheel-btn33" onClick={handleClick}>
+          <img src="/assets/logo-square-spinnwin.png" alt="Wheel" className="wheel-icon1" />
           CREATE WHEEL
         </button>
       </div>

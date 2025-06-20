@@ -1,0 +1,147 @@
+/* Full page layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.namenumber33-dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar */
+.namenumber33-sidebar {
+  width: 280px;
+  background-color: #1e227e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.namenumber33-logo-box {
+  text-align: center;
+}
+
+.namenumber33-logo-img {
+  width: 60px;
+  height: 60px;
+}
+
+.namenumber33-logo-text {
+  font-size: 26px;
+  color: #ffb5f5;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.namenumber33-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+  padding-left: 30px;
+}
+
+.namenumber33-nav-item {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.namenumber33-nav-item.namenumber33-active {
+  background-color: #373c96;
+  font-weight: bold;
+}
+
+.namenumber33-logout-link {
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.namenumber33-logout-link a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Main content */
+.namenumber33-main-section {
+  flex: 1;
+  background: linear-gradient(to bottom right, #8aa9e1, #2c3e97);
+  padding: 40px;
+  color: #fff;
+  overflow-y: auto;
+}
+
+/* Header card */
+.namenumber33-wheel-header-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  color: #1e227e;
+  max-width: 1100px;
+  margin-bottom: 40px;
+}
+
+.namenumber33-wheel-header-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.namenumber33-search-row {
+  display: flex;
+  gap: 15px;
+}
+
+.namenumber33-search-row input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #8aa9e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.namenumber33-search-row button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* No wheels message */
+.namenumber33-no-wheel-section {
+  max-width: 1100px;
+  padding-left: 15px;
+}
+
+.namenumber33-no-wheel-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.namenumber33-no-wheel-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.namenumber33-no-wheel-section button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

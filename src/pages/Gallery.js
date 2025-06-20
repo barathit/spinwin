@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
 import "./Gallery.css";
+import FeaturedWheelsSection from "../components/FeaturedWheelsSection";
 
 const mockWheels = [
   {
@@ -71,8 +72,8 @@ const Gallery = () => {
           <span className="search-icon">🔍</span>
         </div>
 
-        {/* 🎯 FEATURED WHEELS */}
-        <div className="featured-cards-section">
+     
+         {/* <div className="featured-cards-section">
           {filteredWheels.map((wheel, index) => (
             <div className="featured-card" key={index}>
               <div className="wheel-image-box">
@@ -87,9 +88,9 @@ const Gallery = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div>  */}             
       </div>
-
+<FeaturedWheelsSection />
       <Newsletter />
       <Footer />
     </div>

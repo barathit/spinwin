@@ -1,0 +1,82 @@
+.spin-page-container {
+  display: flex;
+  height: 100vh;
+  background-color: #0e1124;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background-color: #1b1e33;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.highlight {
+  color: #ff5ecf;
+}
+
+.highlight2 {
+  color: #e98d7c;
+}
+
+.highlight3 {
+  color: #6ef2e8;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.spin-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spin-button:hover {
+  transform: scale(1.05);
+}

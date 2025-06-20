@@ -35,6 +35,7 @@ function About() {
 
       {/* Section 1 */}
       <section className="about-section">
+      
         <div className="about-container">
           <h4 className="about-subheading">A few words about us</h4>
           <h1 className="about-heading">

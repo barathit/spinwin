@@ -59,28 +59,34 @@
 }
 
 /* Button */
-.create-btn {
-  background-color: #7ee32c;
-  color: black;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 40px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
+/* Unique Create Wheel Button */
+.create-wheel-btn33 {
+ 
+  display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: #7FE017;
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: #1a004f;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   gap: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
+  text-transform: uppercase;
 }
 
-.create-btn:hover {
+/* Hover effect */
+.create-wheel-btn33:hover {
+  background-color: #a3ff33;
   transform: translateY(-2px);
 }
 
-/* Wheel Icon */
+/* Wheel icon */
 .wheel-icon1 {
-  width: 14px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }

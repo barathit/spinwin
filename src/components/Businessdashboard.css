@@ -1,0 +1,74 @@
+/* Main content */
+.namenumber33-main-section {
+  flex: 1;
+ 
+  padding: 40px;
+  color: #fff;
+  overflow-y: auto;
+}
+
+/* Header card */
+.namenumber33-wheel-header-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  color: #1e227e;
+  max-width: 1100px;
+  margin-bottom: 40px;
+}
+
+.namenumber33-wheel-header-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.namenumber33-search-row {
+  display: flex;
+  gap: 15px;
+}
+
+.namenumber33-search-row input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #8aa9e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.namenumber33-search-row button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* No wheels message */
+.namenumber33-no-wheel-section {
+  max-width: 1100px;
+  padding-left: 15px;
+}
+
+.namenumber33-no-wheel-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.namenumber33-no-wheel-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.namenumber33-no-wheel-section button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

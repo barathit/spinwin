@@ -4,6 +4,7 @@ import FeaturedWheelsSection from '../components/FeaturedWheelsSection';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
+import SpinningWheel from '../components/SpinningWheel';
 
 const Home = () => {
   return (
@@ -32,13 +33,7 @@ const Home = () => {
 
     {/* Right: Wheel Image and Spin Button */}
     <div className="hero-right">
-      <img
-        src="/assets/wheel.webp"
-        alt="Giveaway Wheel"
-        className="wheel-image"
-      />
-      <p className="wheel-caption">Ghibli-style images</p>
-      <button className="spin-btn">SPIN</button>
+      <SpinningWheel />
     </div>
   </div>
 </section>

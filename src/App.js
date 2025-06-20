@@ -10,7 +10,8 @@ import Gallery from './pages/Gallery';
 import Usecases from './pages/Usecases';
 import Contact from './pages/Contact';
 import Dashboardlogin from './pages/Dashboardlogin';
-
+import Dashboardhome from './pages/Dashboardhome';
+import Spinpage from './pages/Spinpage';
 // import other pages as needed
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
         <Route path="/usecases" element={<Usecases />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Dashboardlogin" element={<Dashboardlogin />} />
+         <Route path="/Dashboardhome" element={<Dashboardhome />} />
+
+         <Route path="/spinpage" element={<Spinpage />} />
       </Routes>
       
     </Router>
