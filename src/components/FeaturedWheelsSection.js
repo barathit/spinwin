@@ -88,7 +88,7 @@ const FeaturedWheelsSection = () => {
       <div className="wheel-cards-container">
         {wheels.map((wheel, index) => (
          <div className="wheel-card" key={index}>
-  <img src="/assets/wheel.webp" alt="Wheel" className="wheel-image" />
+  <img src="/assets/wheels.png" alt="Wheel" className="wheel-image" />
   <hr />
   <h3 className="wheel-title">{wheel.title}</h3>
   <hr />
@@ -109,7 +109,7 @@ const FeaturedWheelsSection = () => {
         className="bg-red-500 p-8"
         overlayClassName="fixed inset-0 flex justify-center items-start z-50"
       >
-        <div>TEST MODAL</div>
+        
       </Modal>
     </div>
   );

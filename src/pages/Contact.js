@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Newsletter from "../components/Newsletter";
+
 import "./Contact.css";
 
 function Contact() {
@@ -51,32 +51,33 @@ function Contact() {
     <img src="/assets/contact.png" alt="Support" className="contact-image" />
 
     <div className="social-cards">
-      <div className="social-card">
-        <img src="/assets/facebook-icon.png" alt="Facebook" />
-        <h3>130k</h3>
-        <p>Followers</p>
-      </div>
-      <div className="social-card">
-        <img src="/assets/group-icon.png" alt="Members" />
-        <h3>35k</h3>
-        <p>Members</p>
-      </div>
-      <div className="social-card">
-        <img src="/assets/twitter-icon.png" alt="Twitter" />
-        <h3>47k</h3>
-        <p>Followers</p>
-      </div>
-      <div className="social-card">
-        <img src="/assets/email-icon.png" alt="Subscribers" />
-        <h3>29k</h3>
-        <p>Subscribers</p>
-      </div>
-    </div>
+  <div className="social-card">
+    <i className="bi bi-facebook"></i>
+    <h3>130k</h3>
+    <p>Followers</p>
+  </div>
+  <div className="social-card">
+    <i className="bi bi-people-fill"></i>
+    <h3>35k</h3>
+    <p>Members</p>
+  </div>
+  <div className="social-card">
+    <i className="bi bi-twitter-x"></i> {/* or bi-twitter if you prefer the old logo */}
+    <h3>47k</h3>
+    <p>Followers</p>
+  </div>
+  <div className="social-card">
+    <i className="bi bi-envelope-fill"></i>
+    <h3>29k</h3>
+    <p>Subscribers</p>
+  </div>
+</div>
+
   </div>
 </div>
 
 
-      <Newsletter />
+   
       <Footer />
     </div>
   );

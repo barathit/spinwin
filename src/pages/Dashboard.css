@@ -79,3 +79,61 @@
 .login-submit-btn:hover {
   background: #37993f;
 }
+
+/* Responsive Dashboard Styles */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.dashboard-main {
+  flex: 2;
+  min-width: 260px;
+}
+
+.dashboard-sidebar {
+  flex: 1;
+  min-width: 180px;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 992px) {
+  .dashboard-container {
+    gap: 18px;
+    padding: 18px 0;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0;
+  }
+  .dashboard-main, .dashboard-sidebar {
+    min-width: 0;
+    width: 100%;
+  }
+  .dashboard-card {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 4px 0;
+  }
+  .dashboard-card {
+    padding: 8px;
+  }
+}

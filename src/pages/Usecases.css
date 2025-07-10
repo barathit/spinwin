@@ -14,40 +14,45 @@
   left: 0;
   width: 100%;
   height: 300px;
-  background: linear-gradient(to bottom, #b84de4, #6a1db3);
+  background: linear-gradient(1turn, #DF52F8, #3B007E);
   border-bottom-left-radius: 50% 80px;
   border-bottom-right-radius: 50% 80px;
   z-index: 0;
 }
 
 .usecases-box {
-  background: linear-gradient(to right, #6214d1, #3b19e6);
-  padding: 80px 40px;
+
+  background: linear-gradient(135deg, #6214d1, #3b19e6);
+  padding: 60px 40px;
   border-radius: 24px;
   color: white;
-  max-width: 1300px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto ;
   position: relative;
   z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .usecases-title {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 800;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .usecases-subtext {
-  font-size: 1.1rem;
-  color: #e0e0e0;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
-
 
 .usecases-page {
   background: #0f0322;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Purple Gradient Banner */
@@ -85,51 +90,262 @@
   margin: 0 auto;
 }
 
-
-
 /* Card Style */
 .usecase-card {
-  background: linear-gradient(to top, #c54ce3, #511fae);
-  padding: 40px 30px;
-  border-radius: 5px;
+  background: linear-gradient(45deg, #DF52F8, #3B007E);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
   text-align: center;
-  transition: transform 0.3s ease;
-  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .usecase-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(197, 76, 227, 0.2), rgba(81, 31, 174, 0.2));
 }
 
-.usecase-card img {
-  width: 350px;
-  height: auto;
+.usecase-image-container {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.usecase-card h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 16px;
+.usecase-image {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-.usecase-card p {
-  font-size: 1rem;
-  color: #f2f2f2;
+.usecase-card:hover .usecase-image {
+  transform: scale(1.05);
+}
+
+.usecase-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.usecase-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.usecases-footer {
+  text-align: center;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.usecases-note {
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto;
   line-height: 1.6;
 }
 
-.usecases-subtext1 {
-    margin-left: 400px;
-  font-size: 15px;
-  color: #e0e0e0;
-  
+/* Responsive Usecases Page Styles */
+.usecases-container {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background-color: #0a061d;
 }
 
-.usecases-subtext2 {
-    margin-left: 550px;
-  font-size: 15px;
-  color: #e0e0e0;
+.usecases-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
 
-  
+.usecases-grid-section {
+  padding: 40px 20px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.usecases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .usecases-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  .usecases-box {
+    padding: 50px 30px;
+  }
+
+  .usecases-title {
+    font-size: 42px;
+  }
+
+  .usecase-image {
+    width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .usecases-section {
+    padding: 100px 20px 60px;
+  }
+
+  .usecases-section::before {
+    height: 250px;
+  }
+
+  .usecases-box {
+    padding: 40px 25px;
+  }
+
+  .usecases-title {
+    font-size: 36px;
+  }
+
+  .usecases-subtext {
+    font-size: 16px;
+  }
+
+  .usecases-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .usecase-card {
+    padding: 25px;
+  }
+
+  .usecase-title {
+    font-size: 22px;
+  }
+
+  .usecase-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .usecases-section {
+    padding: 80px 15px 50px;
+  }
+
+  .usecases-section::before {
+    height: 200px;
+    border-bottom-left-radius: 30% 60px;
+    border-bottom-right-radius: 30% 60px;
+  }
+
+  .usecases-box {
+    padding: 30px 20px;
+  }
+
+  .usecases-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .usecases-subtext {
+    font-size: 15px;
+  }
+
+  .usecases-grid-section {
+    padding: 30px 15px 60px;
+  }
+
+  .usecases-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+  }
+
+  .usecase-card {
+    padding: 20px;
+  }
+
+  .usecase-image {
+    width: 160px;
+  }
+
+  .usecase-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .usecase-description {
+    font-size: 14px;
+  }
+
+  .usecases-note {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .usecases-section {
+    padding: 60px 12px 40px;
+  }
+
+  .usecases-section::before {
+    height: 150px;
+    border-bottom-left-radius: 25% 40px;
+    border-bottom-right-radius: 25% 40px;
+  }
+
+  .usecases-box {
+    padding: 25px 15px;
+  }
+
+  .usecases-title {
+    font-size: 28px;
+  }
+
+  .usecases-subtext {
+    font-size: 14px;
+  }
+
+  .usecases-grid-section {
+    padding: 20px 12px 40px;
+  }
+
+  .usecases-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .usecase-card {
+    padding: 15px;
+  }
+
+  .usecase-image {
+    width: 140px;
+  }
+
+  .usecase-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .usecase-description {
+    font-size: 13px;
+  }
+
+  .usecases-note {
+    font-size: 13px;
+    padding: 0 10px;
+  }
 }

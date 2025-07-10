@@ -9,14 +9,14 @@
 
 /* Main container */
 .spinning-wheel-container {
-  min-height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
   position: relative;
-  font-family: 'Arial', sans-serif;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Loading screen */
@@ -72,32 +72,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-   margin-right: 70%;
+  margin: 0;
+  margin-bottom: -60px;
 }
 
 .wheel-svg-container {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
   filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4));
- 
 }
 
 .wheel-svg {
   width: 100%;
   height: 100%;
   transition: transform 300ms ease-out;
-   margin-right: 60px;
 }
 
 .wheel-svg.spinning {
   transition: transform 5000ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Fixed pointer positioning - centered and pointing to 12 o'clock */
+/* Fixed pointer positioning */
 .spinning-wheel-pointer {
   position: absolute;
-  top: -15px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -105,8 +104,8 @@
 }
 
 .spinning-wheel-pointer svg {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 /* Business title styling */
@@ -121,10 +120,20 @@
   margin-right: 70%;
 }
 
+/* Wheel caption */
+.wheel-caption {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.9;
+}
+
 /* Spin button */
 .spin-button1 {
   padding: 5px 25px;
-  border-radius: 50px;
+  border-radius: 70px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -132,15 +141,17 @@
   cursor: pointer;
   transition: all 300ms ease;
   transform: scale(1);
-  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  background: linear-gradient(71deg, #2EB999 0%, #248AC9 71%, #217ADB 100%);
   box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
   display: flex;
   align-items: center;
   gap: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  width: 97px;
-  margin-right: 230px;
+  width: 100px;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 90px;
 }
 
 .spin-button:hover:not(:disabled) {
@@ -434,80 +445,76 @@
 
 /* Wheel segment text styling */
 .wheel-segment-text {
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 600;
   fill: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  text-anchor: middle;
 }
 
 /* Wheel border styling */
 .wheel-outer-border {
-  fill: #1f2937;
-  stroke: #111827;
-  stroke-width: 6;
+  stroke: #000;
+  stroke-width: 3;
+  fill: none;
 }
 
 .wheel-center-hub {
-  fill: #DC2626;
-  stroke: #1f2937;
-  stroke-width: 4;
+  fill: #333;
+  stroke: #000;
+  stroke-width: 2;
 }
+
 /* Responsive design */
+@media (max-width: 1200px) {
+  .wheel-svg-container {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .wheel-svg-container {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .wheel-container {
+    margin-bottom: -40px;
+  }
+}
+
 @media (max-width: 768px) {
-  .main-title {
-    font-size: 28px;
-  }
-  
-  .business-title {
-    font-size: 22px;
-  }
-  
   .wheel-svg-container {
     width: 300px;
     height: 300px;
   }
   
-  .spin-button {
-    padding: 14px 40px;
-    font-size: 16px;
+  .wheel-container {
+    margin-bottom: -30px;
   }
   
-  .custom-modal {
-    margin: 10px;
-    padding: 24px;
-  }
-  
-  .modal-title {
-    font-size: 24px;
-  }
-  
-  .modal-emoji {
-    font-size: 48px;
+  .spinning-wheel-pointer svg {
+    width: 30px;
+    height: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .wheel-svg-container {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
   }
   
-  .main-title {
-    font-size: 24px;
-  }
-  
-  .business-title {
-    font-size: 18px;
-  }
-  
-  .spin-button {
-    padding: 12px 32px;
-    font-size: 14px;
+  .wheel-container {
+    margin-bottom: -20px;
   }
   
   .spinning-wheel-pointer svg {
     width: 25px;
     height: 25px;
+  }
+  
+  .wheel-segment-text {
+    font-size: 14px;
   }
 }

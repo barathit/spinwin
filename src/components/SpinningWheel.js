@@ -336,7 +336,7 @@ const SpinningWheel = () => {
             </svg>
           </div>
         </div>
-                       
+                   {/* <div className="wheel-caption">Ghibli-style images</div>    
 
               {/* <div className="business-title">
           Ghibli-style images
@@ -353,6 +353,11 @@ const SpinningWheel = () => {
           
         </button>
       </div>
+
+      <div
+        // className="hero-bg-city"
+        // style={{ background: "url('/assets/hme_building.png') top left/cover no-repeat" }}
+      />
     </div>
   );
 };

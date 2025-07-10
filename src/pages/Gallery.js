@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Newsletter from "../components/Newsletter";
+
 import "./Gallery.css";
 import FeaturedWheelsSection from "../components/FeaturedWheelsSection";
 
@@ -44,7 +44,7 @@ const Gallery = () => {
           <h1 className="title">ALL WHEELS</h1>
           <div className="wheels-row">
             <div className="wheel-item active">
-              <img src="/assets/wheel.webp" alt="Active" />
+              <img src="/assets/wheels.png" alt="Active" />
               <p>ACTIVE</p>
               <div className="underline" />
             </div>
@@ -53,14 +53,14 @@ const Gallery = () => {
               onMouseEnter={() => setHovered("finished")}
               onMouseLeave={() => setHovered(null)}
             >
-              <img src="/assets/wheel.webp" alt="Finished" />
+              <img src="/assets/wheels.png" alt="Finished" />
               <p>FINISHED</p>
               <div className={`underline ${hovered === "finished" ? "show" : ""}`} />
             </div>
           </div>
         </div>
 
-        {/* 🔍 Search for Featured Wheels */}
+        
         <div className="search-wrapper">
           <input
             type="text"
@@ -73,25 +73,10 @@ const Gallery = () => {
         </div>
 
      
-         {/* <div className="featured-cards-section">
-          {filteredWheels.map((wheel, index) => (
-            <div className="featured-card" key={index}>
-              <div className="wheel-image-box">
-                <img src="/assets/wheel.webp" alt="Wheel" />
-              </div>
-              <div className="card-content">
-                <h3>{wheel.title}</h3>
-                <p><span className="by">by</span> Anonymous</p>
-                <p><i className="fas fa-user"></i> {wheel.participants} Participants</p>
-                <p><i className="fas fa-clock"></i> {new Date(wheel.date).toLocaleDateString("en-GB")}</p>
-                <button className="play-button">PLAY NOW</button>
-              </div>
-            </div>
-          ))}
-        </div>  */}             
+                     
       </div>
 <FeaturedWheelsSection />
-      <Newsletter />
+      
       <Footer />
     </div>
   );

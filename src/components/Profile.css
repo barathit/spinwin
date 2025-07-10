@@ -88,7 +88,8 @@
   color: white;
 }
 
-.input-group input {
+.input-group input,
+.input-group textarea {
   width: 100%;
   padding: 12px;
   background: rgba(255, 255, 255, 0.1);
@@ -97,10 +98,27 @@
   color: white;
   font-size: 14px;
   outline: none;
+  font-family: 'Poppins', sans-serif;
+  resize: vertical;
 }
 
-.input-group input::placeholder {
+.input-group input::placeholder,
+.input-group textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group textarea {
+  min-height: 80px;
+  line-height: 1.5;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+}
+
+.input-row .input-group {
+  flex: 1;
 }
 
 .update-btn {
@@ -117,8 +135,45 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
+  width: 200px;
+  height: 60px;
 }
 
-.update-btn:hover {
+.update-btn:hover:not(:disabled) {
   transform: translateY(-1px);
+}
+
+.update-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .profile-left {
+    min-width: auto;
+  }
+  
+  .input-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-row .input-group {
+    flex: none;
+  }
+  
+  .profile-container {
+    padding: 30px 15px;
+  }
+  
+  .profile-title {
+    font-size: 24px;
+  }
 }

@@ -80,3 +80,49 @@
 .spin-button:hover {
   transform: scale(1.05);
 }
+
+/* Responsive Spin Page Styles */
+.spinpage-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.spinpage-wheel {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinpage-info {
+  flex: 2;
+  min-width: 260px;
+}
+
+@media (max-width: 992px) {
+  .spinpage-container {
+    gap: 20px;
+    padding: 24px 0;
+  }
+}
+@media (max-width: 768px) {
+  .spinpage-container {
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px 0;
+  }
+  .spinpage-wheel, .spinpage-info {
+    min-width: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .spinpage-container {
+    padding: 8px 0;
+  }
+}

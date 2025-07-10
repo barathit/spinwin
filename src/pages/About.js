@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Newsletter from "../components/Newsletter";
+
 import "./About.css";
 
 
@@ -43,10 +43,10 @@ function About() {
             SPIN THE WHEEL AND WIN BIG!
           </h1>
           <p className="about-description">
-            Welcome to SpinWin, the ultimate standalone utility designed to enhance your giveaway experiences...
+           Welcome to SpinWin, the ultimate standalone utility designed to enhance your giveaway experiences. Whether you are an organization looking to engage participants or an individual eager to join exciting contests, SpinWin is here to revolutionize the way you interact with giveaways.
           </p>
           <p className="about-description">
-            At SpinWin, our mission is to provide a seamless and captivating platform that adds value to your giveaway events...
+           At SpinWin, our mission is to provide a seamless and captivating platform that adds value to your giveaway events. We have developed a user-friendly interface and integrated it with powerful features to create an immersive experience for both organizers and participants.
           </p>
 
           <div className="about-stats">
@@ -154,7 +154,7 @@ function About() {
       <img src="/assets/twheel_potential.png" alt="Decorative Bubble Icons" className="top-right-image" />
     </section>
 
-      <Newsletter />
+     
       <Footer />
     </div>
   );

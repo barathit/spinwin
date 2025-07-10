@@ -6,75 +6,112 @@ body, html {
   font-family: 'Poppins', sans-serif;
 }
 
-.namenumber33-dashboard-wrapper {
+/* Layout wrapper */
+.dashboardhome-wrapper {
   display: flex;
   height: 100vh;
   width: 100vw;
 }
 
-/* Sidebar */
-.namenumber33-sidebar {
-  width: 280px;
-  background-color: #1e227e;
-  color: white;
+/* Sidebar styles */
+.dashboardhome-sidebar {
+  width: 250px;
+  background: #232c89;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 20px 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 32px 0 0 0;
+  position: relative;
 }
 
-.namenumber33-logo-box {
-  text-align: center;
+.dashboardhome-logo-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
 }
 
-.namenumber33-logo-img {
-  width: 60px;
-  height: 60px;
+.dashboardhome-logo-img {
+  width: 64px;
+  height: 64px;
 }
 
-.namenumber33-logo-text {
-  font-size: 26px;
+.dashboardhome-logo-text {
+  font-size: 2.2rem;
   color: #ffb5f5;
-  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   margin-top: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #ffb5f5aa;
 }
 
-.namenumber33-nav-links {
+.dashboardhome-nav {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 40px;
-  padding-left: 30px;
+  gap: 28px;
+  width: 90%;
+  padding-left: 36px;
+
 }
 
-.namenumber33-nav-item {
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
+.dashboardhome-nav-item {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-align: left;
+  padding: 8px 8px 8px 8px;
   border-radius: 12px;
-  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.dashboardhome-nav-item.active,
+.dashboardhome-nav-item.active:hover {
+  background: #373c96;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px #0001;
+}
+.dashboardhome-nav-item:not(.active):hover {
+  background: #2c3e97;
+  color: #ffb5f5;
 }
 
-.namenumber33-nav-item.namenumber33-active {
-  background-color: #373c96;
-  font-weight: bold;
+.dashboardhome-logout-box {
+  position: absolute;
+  bottom: 36px;
+  left: 36px;
+  width: calc(100% - 36px);
+  
+}
+.dashboardhome-logout-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 8px 8px 8px;
+  text-align: left;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 12px;
+}
+.dashboardhome-logout-btn:hover {
+  background: #2c3e97;
+  color: #ffb5f5;
 }
 
-.namenumber33-logout-link {
-  padding-left: 30px;
-  padding-bottom: 30px;
-}
-
-.namenumber33-logout-link a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-/* Main content */
-.namenumber33-main-section {
+/* Main content area */
+.dashboardhome-main {
   flex: 1;
-  background: linear-gradient(to bottom right, #8aa9e1, #2c3e97);
+  background: linear-gradient(120deg, #8aa9e1 0%, #2c3e97 100%);
   padding: 40px;
   color: #fff;
   overflow-y: auto;
@@ -144,4 +181,62 @@ body, html {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* Responsive Dashboard Home Styles */
+.dashboardhome-container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.dashboardhome-main {
+  flex: 2;
+  min-width: 260px;
+}
+
+.dashboardhome-sidebar {
+  flex: 1;
+  min-width: 180px;
+}
+
+.dashboardhome-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 992px) {
+  .dashboardhome-container {
+    gap: 18px;
+    padding: 18px 0;
+  }
+}
+@media (max-width: 768px) {
+  .dashboardhome-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0;
+  }
+  .dashboardhome-main, .dashboardhome-sidebar {
+    min-width: 0;
+    width: 100%;
+  }
+  .dashboardhome-card {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .dashboardhome-container {
+    padding: 4px 0;
+  }
+  .dashboardhome-card {
+    padding: 8px;
+  }
 }

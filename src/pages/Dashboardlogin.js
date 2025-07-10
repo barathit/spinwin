@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import './Dashboard.css';
 import { useNavigate } from 'react-router-dom';
+import UserManager from '../utils/userManager';
+
 const DashboardLogin = () => {
   const [mobile, setMobile] = useState('');
   const [showOtp, setShowOtp] = useState(false);
@@ -9,15 +11,51 @@ const DashboardLogin = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate(); 
   // Handle mobile number submit
-  const handleMobileSubmit = (e) => {
-    e.preventDefault();
-    if (!/^\d{10}$/.test(mobile)) {
-      setError('Please enter a valid 10-digit mobile number');
-      return;
+ const handleMobileSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!/^\d{10}$/.test(mobile)) {
+    setError("Please enter a valid 10-digit mobile number");
+    return;
+  }
+
+  setError("");
+
+  const fullPhoneNumber = "91" + mobile;
+
+  try {
+    const payload = {
+      phone_number: fullPhoneNumber,
+      method: "userSignup",
+      module: "user",
+      apikey: "RVY0VnVLUDhQSHZST2hFM04xcnFnZDkzU2J2bGtZVVM1S2NNaXY2NHh4cmhhdEM5cjMyMTJaMXA"
+    };
+
+    const response = await fetch("https://8qvo5z6nok.execute-api.us-east-2.amazonaws.com/twheel-api/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json();
+    const body = typeof result.body === "string" ? JSON.parse(result.body) : result.body;
+      
+    console.log("OTP API result:", result);
+console.log("OTP API body:", body);
+
+
+    if (body.status === "success") {
+      setShowOtp(true);
+    } else {
+      setError(body.message || "Failed to send OTP. Try again.");
     }
-    setError('');
-    setShowOtp(true);
-  };
+
+  } catch (error) {
+    console.error("OTP send error:", error);
+    setError("Something went wrong. Try again later.");
+  }
+};
+
 
   // Handle OTP input
   const handleChange = (e, idx) => {
@@ -39,17 +77,80 @@ const DashboardLogin = () => {
   };
 
 
-  const handleOtpSubmit = (e) => {
+const handleOtpSubmit = async (e) => {
   e.preventDefault();
+
   if (otp.some((digit) => digit === '')) {
-    setError('Please enter the complete OTP');
+    setError("Please enter the complete OTP");
     return;
   }
 
-  alert('OTP Submitted: ' + otp.join(''));
-  // OTP is complete
-  navigate('/Dashboardhome');
+  const fullOtp = otp.join('');
+  const fullPhoneNumber = "91" + mobile;
+
+  try {
+    const payload = {
+      phone_number: fullPhoneNumber,
+      otp: fullOtp,
+      method: "verifyOTP",
+      module: "user",
+      apikey: "RVY0VnVLUDhQSHZST2hFM04xcnFnZDkzU2J2bGtZVVM1S2NNaXY2NHh4cmhhdEM5cjMyMTJaMXA"
+    };
+
+    const response = await fetch("https://8qvo5z6nok.execute-api.us-east-2.amazonaws.com/twheel-api/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json();
+    const body = typeof result.body === "string" ? JSON.parse(result.body) : result.body;
+    console.log("OTP verification response:", result);
+    console.log("OTP verification body:", body);
+    
+    if (body.status === "success") {
+      // Try to extract user ID from OTP verification response first
+      let userId = null;
+      
+      if (body.data && body.data.user_id) {
+        userId = body.data.user_id;
+      } else if (body.data && body.data._id) {
+        userId = body.data._id;
+      } else if (body.user_id) {
+        userId = body.user_id;
+      } else if (body._id) {
+        userId = body._id;
+      }
+      
+      if (userId) {
+        console.log('User ID found in OTP response:', userId);
+        UserManager.setUserId(userId);
+        alert("OTP Verified!");
+        navigate("/Dashboardhome");
+      } else {
+        // Fallback to fetching user ID separately
+        console.log('No user ID in OTP response, fetching separately...');
+        try {
+          await UserManager.fetchUserId(fullPhoneNumber);
+          alert("OTP Verified!");
+          navigate("/Dashboardhome");
+        } catch (userIdError) {
+          console.error("Error fetching user ID:", userIdError);
+          // Still navigate even if user ID fetch fails
+          alert("OTP Verified! Navigating to dashboard...");
+          navigate("/Dashboardhome");
+        }
+      }
+    } else {
+      setError(body.message || "Invalid OTP");
+    }
+
+  } catch (error) {
+    console.error("OTP verify error:", error);
+    setError("Something went wrong. Please try again.");
+  }
 };
+
 
 
   const handleResend = (e) => {

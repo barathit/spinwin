@@ -1,0 +1,29 @@
+{
+  "short_name": "SpinWin",
+  "name": "SpinWin - Wheel Spinning Platform",
+  "icons": [
+    {
+      "src": "assets/logo-square-spinnwin.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo-square-spinnwin.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo-square-spinnwin.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#6d1e7c",
+  "background_color": "#0b0115",
+  "orientation": "portrait",
+  "description": "SpinWin - Create and manage spinning wheels for giveaways and contests",
+  "prefer_related_applications": false
+} 

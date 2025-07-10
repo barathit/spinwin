@@ -16,7 +16,7 @@ body {
 /* === Purple Top Shape === */
 .top-background-shape {
   width: 100%;
-  height: 160px;
+  height: 300px;
   background: linear-gradient(to bottom, #b84fe3, #7621c6);
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -25,26 +25,30 @@ body {
 /* === All Wheels Box === */
 .all-wheels-container {
   background: linear-gradient(320deg, #3b26db 1%, #7b19cb);
-  margin: -60px auto 0;
+  margin: -80px auto 0;
   max-width: 78%;
-  
+  height: 100px;
   border-radius: 25px;
   padding: 60px 30px;
   text-align: center;
   color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  height: 600px;
 }
 
 .title {
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  margin-top: 80px;
 }
 
 .wheels-row {
   display: flex;
   justify-content: center;
   gap: 80px;
+   margin-top: 100px;
+
 }
 
 .wheel-item {
@@ -80,8 +84,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 60px;
+  margin-top: 100px;
+ 
 }
 
 .search-bar {
@@ -188,4 +192,205 @@ body {
 
 .play-button:hover {
   background-color: #19a99c;
+}
+
+.gallery-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #8b3dff 0%, #6a11cb 100%);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(74, 21, 171, 0.9);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-title {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.wheels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.wheel-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.wheel-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.wheel-image:hover {
+  transform: rotate(30deg);
+}
+
+.wheel-status {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+/* Curved shape decorations */
+.gallery-container::before,
+.gallery-container::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: #0a061d;
+  z-index: 1;
+}
+
+.gallery-container::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.gallery-container::after {
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .gallery-content {
+    max-width: 1100px;
+    padding: 35px;
+  }
+
+  .gallery-title {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+
+  .wheel-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .wheel-status {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery-container {
+    padding: 60px 15px;
+  }
+
+  .gallery-content {
+    padding: 30px;
+  }
+
+  .gallery-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .wheels-grid {
+    gap: 30px;
+  }
+
+  .wheel-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .wheel-status {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 50px 15px;
+  }
+
+  .gallery-content {
+    padding: 25px;
+  }
+
+  .gallery-title {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  .wheels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .wheel-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .wheel-status {
+    font-size: 18px;
+  }
+
+  .gallery-container::before,
+  .gallery-container::after {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 40px 12px;
+  }
+
+  .gallery-content {
+    padding: 20px;
+  }
+
+  .gallery-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .wheels-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .wheel-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .wheel-status {
+    font-size: 16px;
+  }
+
+  .gallery-container::before,
+  .gallery-container::after {
+    height: 70px;
+  }
 }

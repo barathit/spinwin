@@ -1,75 +1,102 @@
 .about-section {
-  background: #0b0023;
-  padding: 80px 20px;
+  background: #12002C;
+  padding: 60px 20px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-
-
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(1turn, #DF52F8, #3B007E);
+  border-bottom-left-radius: 50% 80px;
+  border-bottom-right-radius: 50% 80px;
+  z-index: 0;
+}
 
 .about-container {
-  background: linear-gradient(135deg, #4f00d0, #8f00ff);
-  color: white;
-  border-radius: 20px;
-  max-width: 900px;
-  padding: 60px 40px;
+  width: 100%;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  margin-top: 140px;
+  padding: 80px 60px;
   text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #9333EA, #7C3AED);
+  border-radius: 40px;
   position: relative;
-  z-index: 1;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .about-subheading {
-  color: #ffc107;
-  font-size: 16px;
+  color: #FFA500;
+  font-size: 20px;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
 .about-heading {
-  font-size: 36px;
+  font-size: 64px;
   font-weight: 700;
-  margin-bottom: 30px;
-  line-height: 1.3;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .about-description {
-  font-size: 16px;
-  color: #eee;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 20px;
-  line-height: 1.6;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-stats {
-  background: #2e004f;
   display: flex;
-  justify-content: space-around;
-  padding: 30px 20px;
-  border-radius: 50px;
-  margin-top: 40px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+  margin-top: 80px;
+  padding: 35px 80px;
+  background: rgba(44, 21, 88, 0.95);
+  border-radius: 80px;
+  position: relative;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stat-card {
   text-align: center;
+  flex: 1;
 }
 
 .stat-card h2 {
-  font-size: 28px;
+  font-size: 56px;
+  font-weight: 700;
   color: white;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .stat-card p {
-  font-size: 14px;
-  color: #6ee3ff;
+  font-size: 16px;
+  color: #4ADE80;
+  margin: 0;
 }
-
-
 
 /* 
 section2 */
-
 
 .hiw-section {
   background-color: #0e002b;
@@ -175,9 +202,7 @@ section2 */
   color: white;
 }
 
-
 /* section3 */
-
 
 /* Section3.css */
 .section3 {
@@ -311,4 +336,530 @@ section2 */
   width: 500px;
   opacity: 0.8;
   pointer-events: none;
+}
+
+/* Large screens */
+@media (max-width: 1400px) {
+  .about-container {
+    max-width: 1100px;
+    padding: 70px 50px;
+  }
+
+  .about-heading {
+    font-size: 58px;
+  }
+
+  .about-stats {
+    gap: 100px;
+    padding: 32px 70px;
+  }
+
+  .hiw-img-top {
+    width: 400px;
+    right: 60px;
+  }
+
+  .hiw-img-bottom {
+    width: 350px;
+    right: 100px;
+  }
+
+  .hiw-group {
+    margin-right: 200px;
+  }
+
+  .section3-container {
+    max-width: 1100px;
+  }
+
+  .section3-title {
+    font-size: 54px;
+  }
+
+  .section3-cards {
+    gap: 30px;
+  }
+
+  .top-right-image {
+    width: 300px;
+    right: 20px;
+  }
+}
+
+/* Medium-large screens */
+@media (max-width: 1200px) {
+  .about-section {
+    padding: 40px 20px;
+  }
+
+  .about-container {
+    max-width: 900px;
+    padding: 60px 40px;
+  }
+
+  .about-heading {
+    font-size: 52px;
+    margin-bottom: 30px;
+  }
+
+  .about-description {
+    font-size: 17px;
+    max-width: 800px;
+  }
+
+  .about-stats {
+    gap: 80px;
+    padding: 30px 60px;
+    margin-top: 60px;
+  }
+
+  .stat-card h2 {
+    font-size: 48px;
+  }
+
+  .hiw-img-top {
+    width: 350px;
+    right: 40px;
+  }
+
+  .hiw-img-bottom {
+    width: 300px;
+    right: 80px;
+  }
+
+  .hiw-group {
+    margin-right: 150px;
+  }
+
+  .hiw-heading {
+    margin-right: 450px;
+  }
+
+  .hiw-subheading {
+    margin-right: 400px;
+  }
+
+  .section3-container {
+    max-width: 900px;
+  }
+
+  .section3-title {
+    font-size: 48px;
+  }
+
+  .section3-desc {
+    font-size: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section3-cards {
+    gap: 25px;
+  }
+
+  .section3-card {
+    padding: 30px;
+  }
+
+  .section3-card-img {
+    width: 120px;
+  }
+
+  .section3-card-right h3 {
+    font-size: 22px;
+  }
+
+  .top-right-image {
+    width: 250px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-container {
+    padding: 50px 30px;
+    border-radius: 35px;
+  }
+
+  .about-heading {
+    font-size: 44px;
+  }
+
+  .about-description {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .about-stats {
+    gap: 60px;
+    padding: 25px 40px;
+    border-radius: 60px;
+  }
+
+  .stat-card h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+
+  .hiw-section {
+    padding: 40px 20px;
+  }
+
+  .hiw-img-top {
+    width: 300px;
+    right: 20px;
+    top: 150px;
+  }
+
+  .hiw-img-bottom {
+    width: 250px;
+    right: 50px;
+  }
+
+  .hiw-group {
+    margin-right: 100px;
+  }
+
+  .hiw-heading {
+    margin-right: 350px;
+    font-size: 1.6rem;
+  }
+
+  .hiw-subheading {
+    margin-right: 300px;
+  }
+
+  .hiw-card {
+    width: 180px;
+    height: 180px;
+  }
+
+  .section3 {
+    padding: 50px 20px;
+  }
+
+  .section3-title {
+    font-size: 42px;
+  }
+
+  .section3-tagline {
+    font-size: 18px;
+  }
+
+  .section3-desc {
+    font-size: 14px;
+  }
+
+  .section3-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section3-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .section3-card-left {
+    min-width: 100px;
+  }
+
+  .section3-card-img {
+    width: 100px;
+  }
+
+  .section3-buttons {
+    gap: 15px;
+  }
+
+  .btn-outline,
+  .btn-filled {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .top-right-image {
+    width: 200px;
+    opacity: 0.5;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 30px 16px;
+  }
+
+  .about-container {
+    padding: 40px 25px;
+    border-radius: 30px;
+  }
+
+  .about-subheading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .about-heading {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 50px;
+  }
+
+  .stat-card h2 {
+    font-size: 38px;
+  }
+
+  .stat-card p {
+    font-size: 15px;
+  }
+
+  .hiw-section {
+    padding: 30px 16px;
+  }
+
+  .hiw-title {
+    font-size: 2rem;
+  }
+
+  .hiw-img-top,
+  .hiw-img-bottom {
+    display: none;
+  }
+
+  .hiw-group {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .hiw-heading {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .hiw-subheading {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .hiw-card-wrapper {
+    gap: 1.5rem;
+  }
+
+  .hiw-card {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hiw-icon {
+    width: 35px;
+  }
+
+  .hiw-step-number {
+    font-size: 1.1rem;
+  }
+
+  .hiw-step-title {
+    font-size: 0.85rem;
+  }
+
+  .section3 {
+    padding: 40px 16px;
+  }
+
+  .section3-heading-block {
+    margin-bottom: 30px;
+  }
+
+  .section3-title {
+    font-size: 36px;
+  }
+
+  .section3-tagline {
+    font-size: 16px;
+  }
+
+  .section3-card {
+    padding: 25px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section3-card-left {
+    margin-bottom: 20px;
+  }
+
+  .section3-card-right {
+    padding-left: 0;
+  }
+
+  .section3-card-right h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .section3-buttons {
+    justify-content: center;
+  }
+
+  .top-right-image {
+    display: none;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 20px 12px;
+  }
+
+  .about-container {
+    padding: 30px 20px;
+    border-radius: 25px;
+  }
+
+  .about-subheading {
+    font-size: 16px;
+  }
+
+  .about-heading {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  .about-description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .about-stats {
+    padding: 25px 20px;
+    gap: 30px;
+    margin-top: 40px;
+    border-radius: 40px;
+  }
+
+  .stat-card h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .stat-card p {
+    font-size: 14px;
+  }
+
+  .hiw-section {
+    padding: 25px 12px;
+  }
+
+  .hiw-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .hiw-subtitle {
+    font-size: 1rem;
+  }
+
+  .hiw-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hiw-card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hiw-heading {
+    font-size: 1.4rem;
+  }
+
+  .hiw-subheading {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .hiw-step-number {
+    font-size: 1rem;
+  }
+
+  .hiw-step-title {
+    font-size: 0.8rem;
+  }
+
+  .section3 {
+    padding: 30px 12px;
+  }
+
+  .section3-title {
+    font-size: 28px;
+  }
+
+  .section3-tagline {
+    font-size: 15px;
+  }
+
+  .section3-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .section3-card {
+    padding: 20px 15px;
+  }
+
+  .section3-card-img {
+    width: 80px;
+  }
+
+  .section3-card-right h3 {
+    font-size: 18px;
+  }
+
+  .section3-card-right p {
+    font-size: 13px;
+  }
+
+  .section3-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-outline,
+  .btn-filled {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .about-container {
+    padding: 25px 15px;
+    border-radius: 20px;
+  }
+
+  .about-heading {
+    font-size: 24px;
+  }
+
+  .about-stats {
+    padding: 20px 15px;
+    border-radius: 30px;
+  }
+
+  .stat-card h2 {
+    font-size: 28px;
+  }
 }
